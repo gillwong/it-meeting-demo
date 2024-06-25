@@ -34,7 +34,7 @@ export default function Home() {
             src={birdImage}
             width={320} // smaller file size
             alt="A bird"
-          // className="w-80" // larger file size
+            // className="w-80" // larger file size
           />
         </section>
 
@@ -133,13 +133,66 @@ export default function Home() {
           </H3>
           <p>Prefix the ids with the component name to prevent id collision.</p>
           <Shape />
-          <p>Convert data URI href in image to file using{" "}
-            <Link href="https://www.site24x7.com/tools/datauri-to-image.html" target="_blank" className="text-blue-500 underline underline-offset-2 hover:underline-offset-4">Data URI to Image Converter</Link>:
+          <p>
+            Convert data URI href in image to file using{" "}
+            <Link
+              href="https://www.site24x7.com/tools/datauri-to-image.html"
+              target="_blank"
+              className="text-blue-500 underline underline-offset-2 hover:underline-offset-4"
+            >
+              Data URI to Image Converter
+            </Link>
+            :
           </p>
-          <Frame className="drop-shadow-lg"/>
+          <Frame className="drop-shadow-lg" />
           <p>Original Figma export:</p>
           <FrameOriginal className="drop-shadow-lg" />
         </section>
+      </section>
+
+      <section className="p-8">
+        <H2>Text Inner Shadow</H2>
+        <div className="text-8xl font-extrabold text-center space-y-4 mb-4">
+          <p style={{ color: "olive" }}>Example Text</p>
+          <p
+            style={{
+              backgroundColor: "olive",
+              color: "transparent",
+              textShadow: "0 2px 3px rgba(255 255 255 / 50%)",
+              backgroundClip: "text",
+            }}
+          >
+            Example Text
+          </p>
+        </div>
+        <div className="text-8xl font-extrabold text-center bg-slate-900 space-y-4 pb-4">
+          <p style={{ color: "blue" }}>Example Text</p>
+          <p
+            style={{
+              backgroundColor: "blue",
+              color: "transparent",
+              textShadow: "0px 2px 3px rgba(255 255 255 / 10%)",
+              backgroundClip: "text",
+              filter: "brightness(3)",
+            }}
+          >
+            Example Text
+          </p>
+        </div>
+        <div className="text-8xl font-extrabold text-center space-y-4 mb-4">
+          <p style={{ color: "skyblue" }}>Example Text</p>
+          <p
+            style={{
+              backgroundColor: "hsl(197.4deg 71.43% 50.55%)",
+              color: "transparent",
+              textShadow: "0px 2px 3px rgb(255 255 255 / 50%)",
+              backgroundClip: "text",
+            }}
+          >
+            Example Text
+          </p>
+          <p style={{ color: "hsl(197.4deg 71.43% 50.55%)" }}>Example Text</p>
+        </div>
       </section>
     </main>
   );
